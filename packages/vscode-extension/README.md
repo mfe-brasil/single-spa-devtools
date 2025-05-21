@@ -1,48 +1,48 @@
 # Single SPA Devtools VSCode Extension
 
-## Visão Geral
+## Overview
 
-Esta extensão para o VSCode foi criada para potencializar o desenvolvimento de aplicações baseadas em [single-spa](https://single-spa.js.org/) e microfrontends. Ela se integra ao plugin Webpack do single-spa-devtools, permitindo monitorar, debugar e gerenciar MFEs (Micro Frontends) diretamente do seu editor.
+This VSCode extension was created to enhance the development of [single-spa](https://single-spa.js.org/) and microfrontend-based applications. It integrates with the single-spa-devtools Webpack plugin, allowing you to monitor, debug, and manage MFEs (Micro Frontends) directly from your editor.
 
-## Funcionalidades
+## Features
 
-- **Monitorar MFEs:** Visualize em tempo real quais micro frontends estão ativos no ambiente de desenvolvimento.
-- **Aplicar override de MFEs:** Faça override automático ou manual de MFEs, facilitando testes e desenvolvimento isolado de cada micro frontend.
-- **Adicionar novos Overrides Manualmente:** Crie e gerencie regras de override diretamente pela interface da extensão.
-- **Monitorar eventos:** Acompanhe eventos relevantes do ecossistema single-spa, como carregamento, atualização e erros de MFEs.
-- **Debug:** Ferramentas para facilitar o debug de MFEs, incluindo logs, inspeção de importmap e status de MFEs.
-- **Notificações em tempo real:** Receba alertas sobre mudanças no importmap, MFEs carregados/descarregados e conflitos de override.
-- **Interface amigável:** Painel dedicado no VSCode para visualizar e interagir com MFEs e overrides.
-- **Logs centralizados:** Visualize logs do plugin Webpack e da extensão em um único local.
-- **Ações rápidas:** Comandos de atalho para reiniciar MFEs, limpar overrides e atualizar importmap.
+- **Monitor MFEs:** See in real time which micro frontends are active in your development environment.
+- **Apply MFE overrides:** Automatically or manually override MFEs, making it easier to test and develop each micro frontend in isolation.
+- **Add new manual overrides:** Create and manage override rules directly from the extension interface.
+- **Monitor events:** Track relevant events in the single-spa ecosystem, such as loading, updating, and MFE errors.
+- **Debug:** Tools to help debug MFEs, including logs, importmap inspection, and MFE status.
+- **Real-time notifications:** Get alerts about importmap changes, MFEs being loaded/unloaded, and override conflicts.
+- **User-friendly interface:** Dedicated panel in VSCode to view and interact with MFEs and overrides.
+- **Centralized logs:** View logs from both the Webpack plugin and the extension in one place.
+- **Quick actions:** Shortcut commands to restart MFEs, clear overrides, and update the importmap.
 
-## Instalação
+## Installation
 
-1. Clone este repositório ou baixe o pacote da extensão.
-2. No VSCode, pressione `F5` para abrir uma nova janela de desenvolvimento de extensões.
-3. Siga as instruções para instalar a extensão localmente.
+1. Clone this repository or download the extension package.
+2. In VSCode, press `F5` to open a new Extension Development Host window.
+3. Follow the instructions to install the extension locally.
 
-> Em breve: Disponível no marketplace do VSCode.
+> Coming soon: Available on the VSCode marketplace.
 
-## Como usar
+## How to use
 
-1. Certifique-se de que o plugin `single-spa-devtools-webpack` está instalado e configurado no seu root-config.
-2. Inicie sua aplicação single-spa normalmente.
-3. Abra o painel "Single SPA Devtools" no VSCode para visualizar e interagir com os MFEs e overrides.
+1. Make sure the `single-spa-devtools-webpack` plugin is installed and configured in your root-config.
+2. Start your single-spa application as usual.
+3. Open the "Single SPA Devtools" panel in VSCode to view and interact with MFEs and overrides.
 
 ## Roadmap
 
-- [ ] Interface gráfica para gerenciamento de MFEs e overrides.
-- [ ] Integração com logs e eventos do Webpack plugin.
-- [ ] Suporte a múltiplos ambientes (dev, staging, prod).
-- [ ] Ferramentas de análise de performance de MFEs.
-- [ ] Sugestão automática de overrides baseada em histórico de desenvolvimento.
-- [ ] Exportação/importação de configurações de override.
+- [ ] Graphical interface for managing MFEs and overrides.
+- [ ] Integration with logs and events from the Webpack plugin.
+- [ ] Support for multiple environments (dev, staging, prod).
+- [ ] MFE performance analysis tools.
+- [ ] Automatic override suggestions based on development history.
+- [ ] Export/import override configurations.
 
-## Contribuição
+## Contributing
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests com sugestões, correções ou novas funcionalidades.
+Contributions are welcome! Feel free to open issues or pull requests with suggestions, fixes, or new features.
 
-## Licença
+## License
 
 MIT

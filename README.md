@@ -1,44 +1,44 @@
 # single-spa-devtools
 
-## Visão Geral
+## Overview
 
-O **single-spa-devtools** é um ecossistema de ferramentas para potencializar o desenvolvimento de aplicações baseadas em [single-spa](https://single-spa.js.org/) e microfrontends. O projeto é composto por dois principais módulos integrados:
+**single-spa-devtools** is a tool ecosystem designed to enhance the development of [single-spa](https://single-spa.js.org/) and microfrontend-based applications. The project is composed of two main integrated modules:
 
-- **[single-spa-devtools-webpack-plugin](./packages/webpack-plugin/)**: Um plugin para Webpack que deve ser adicionado ao `root-config` de projetos single-spa. Ele monitora o importmap da aplicação e emite eventos via WebSocket para a extensão do VSCode, permitindo identificar MFEs (Micro Frontends) ativos, realizar overrides automáticos e outras integrações avançadas.
-- **[single-spa-devtools VSCode Extension](./packages/vscode-extension/)**: Uma extensão para o VSCode que se conecta ao plugin Webpack, oferecendo uma interface amigável para monitorar, debugar e gerenciar MFEs diretamente do editor. Permite aplicar overrides, acompanhar eventos, receber notificações em tempo real e muito mais.
+- **[single-spa-devtools-webpack-plugin](./packages/webpack-plugin/)**: A Webpack plugin that should be added to the `root-config` of single-spa projects. It monitors the application's importmap and emits events via WebSocket to the VSCode extension, enabling detection of active MFEs (Micro Frontends), automatic overrides, and other advanced integrations.
+- **[single-spa-devtools VSCode Extension](./packages/vscode-extension/)**: A VSCode extension that connects to the Webpack plugin, providing a user-friendly interface to monitor, debug, and manage MFEs directly from the editor. It allows you to apply overrides, track events, receive real-time notifications, and much more.
 
-## Principais Funcionalidades
+## Main Features
 
-- Monitoramento em tempo real dos MFEs ativos.
-- Override automático e manual de MFEs para facilitar testes e desenvolvimento isolado.
-- Gerenciamento e criação de regras de override pela interface do VSCode.
-- Monitoramento de eventos do ecossistema single-spa (carregamento, atualização, erros, etc).
-- Ferramentas de debug, logs centralizados e notificações em tempo real.
-- Painel dedicado no VSCode para interação com MFEs e overrides.
+- Real-time monitoring of active MFEs.
+- Automatic and manual override of MFEs for easier testing and isolated development.
+- Management and creation of override rules through the VSCode interface.
+- Monitoring of single-spa ecosystem events (loading, updating, errors, etc).
+- Debug tools, centralized logs, and real-time notifications.
+- Dedicated panel in VSCode for interacting with MFEs and overrides.
 
-## Como funciona a integração
+## How Integration Works
 
-1. O plugin Webpack é instalado no root-config do seu projeto single-spa.
-2. Ele monitora o importmap e envia informações via WebSocket para a extensão do VSCode.
-3. A extensão exibe, em tempo real, o status dos MFEs, permite aplicar overrides e oferece ferramentas para facilitar o desenvolvimento e debug de microfrontends.
+1. The Webpack plugin is installed in the root-config of your single-spa project.
+2. It monitors the importmap and sends information via WebSocket to the VSCode extension.
+3. The extension displays, in real time, the status of MFEs, allows you to apply overrides, and provides tools to facilitate the development and debugging of microfrontends.
 
-## Comece agora
+## Get Started
 
-- Veja como instalar e usar o [plugin Webpack](./packages/webpack-plugin/README.md)
-- Veja como instalar e usar a [extensão VSCode](./packages/vscode-extension/README.md)
+- See how to install and use the [Webpack plugin](./packages/webpack-plugin/README.md)
+- See how to install and use the [VSCode extension](./packages/vscode-extension/README.md)
 
 ## Roadmap
 
-- Novas integrações entre plugin e extensão
-- Suporte a múltiplos ambientes
-- Ferramentas de análise de performance
-- Sugestão automática de overrides
-- Exportação/importação de configurações
+- New integrations between plugin and extension
+- Support for multiple environments
+- Performance analysis tools
+- Automatic override suggestions
+- Export/import of configurations
 
-## Contribua
+## Contribute
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests em qualquer um dos pacotes.
+Contributions are welcome! Feel free to open issues or pull requests in any of the packages.
 
-## Licença
+## License
 
 MIT

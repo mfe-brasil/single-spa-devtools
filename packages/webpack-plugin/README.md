@@ -1,60 +1,60 @@
 # Single SPA Webpack Plugin
 
-## Visão Geral
+## Overview
 
-Este projeto é um plugin para Webpack projetado para ser utilizado no `root-config` de projetos que utilizam [single-spa](https://single-spa.js.org/). O objetivo principal é monitorar o importmap da aplicação e emitir eventos via WebSocket para a extensão do VSCode, permitindo que a extensão identifique micro frontends (MFEs) em execução e realize overrides automáticos, além de outras funcionalidades relacionadas ao ecossistema single-spa e microfrontends.
+This project is a Webpack plugin designed to be used in the `root-config` of projects that use [single-spa](https://single-spa.js.org/). Its main goal is to monitor the application's importmap and emit events via WebSocket to the VSCode extension, allowing the extension to detect running micro frontends (MFEs), perform automatic overrides, and enable other features related to single-spa and microfrontend ecosystems.
 
-## Funcionalidades
+## Features
 
-- **Monitoramento do importmap:** Observa alterações no importmap do projeto.
-- **Comunicação via WebSocket:** Emite eventos para a extensão do VSCode, facilitando integrações e automações.
-- **Detecção de MFEs ativos:** Permite à extensão identificar MFEs rodando e realizar overrides automáticos.
-- **Base para futuras features:** Estrutura pronta para expandir funcionalidades ligadas a single-spa e microfrontends.
+- **Importmap monitoring:** Watches for changes in the project's importmap.
+- **WebSocket communication:** Emits events to the VSCode extension, enabling integrations and automations.
+- **Active MFE detection:** Allows the extension to identify running MFEs and perform automatic overrides.
+- **Foundation for future features:** Ready to expand with more single-spa and microfrontend-related capabilities.
 
-> **Nota:** A implementação inicial do plugin apenas exibe uma mensagem no console ao final do build. As funcionalidades de WebSocket e monitoramento do importmap serão implementadas nas próximas versões.
+> **Note:** The initial implementation of the plugin only logs a message to the console at the end of the build. WebSocket and importmap monitoring features will be implemented in future versions.
 
-## Instalação
+## Installation
 
-Adicione o plugin ao seu projeto:
+Add the plugin to your project:
 
 ```bash
 npm install --save-dev single-spa-devtools-webpack
-# ou
+# or
 pnpm add -D single-spa-devtools-webpack
 ```
 
-## Uso
+## Usage
 
-No seu `webpack.config.js` do root-config:
+In your root-config's `webpack.config.js`:
 
 ```js
 const { SingleSpaDevtoolsWebpackPlugin } = require('single-spa-devtools-webpack');
 
 module.exports = {
-  // ... sua configuração webpack ...
+  // ... your webpack config ...
   plugins: [
     new SingleSpaDevtoolsWebpackPlugin(),
   ],
 };
 ```
 
-## Como funciona
+## How it works
 
-1. O plugin será importado e adicionado à lista de plugins do Webpack no root-config do seu projeto single-spa.
-2. Ao final do processo de build, o plugin irá (futuramente) monitorar o importmap e emitir eventos via WebSocket para a extensão do VSCode.
-3. A extensão do VSCode poderá, então, identificar MFEs ativos e realizar overrides automáticos, além de outras integrações planejadas.
+1. The plugin is imported and added to the Webpack plugins list in your single-spa root-config.
+2. At the end of the build process, the plugin will (in the future) monitor the importmap and emit events via WebSocket to the VSCode extension.
+3. The VSCode extension can then identify active MFEs and perform automatic overrides, as well as other planned integrations.
 
 ## Roadmap
 
-- [ ] Implementar monitoramento do importmap.
-- [ ] Adicionar emissão de eventos via WebSocket.
-- [ ] Documentar exemplos de integração com a extensão do VSCode.
-- [ ] Adicionar testes automatizados.
+- [ ] Implement importmap monitoring.
+- [ ] Add WebSocket event emission.
+- [ ] Document integration examples with the VSCode extension.
+- [ ] Add automated tests.
 
-## Contribuição
+## Contributing
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+Contributions are welcome! Feel free to open issues or pull requests.
 
-## Licença
+## License
 
 MIT
