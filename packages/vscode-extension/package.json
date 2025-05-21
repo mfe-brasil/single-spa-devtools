@@ -1,0 +1,22 @@
+{
+  "name": "vscode-extension",
+  "displayName": "single-spa-devtools",
+  "description": "A tool to help the developer that wants to work with Single SPA. This tool is called single-spa-devtools and you can install it in a simple step",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "single-spa-devtools.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  }
+}

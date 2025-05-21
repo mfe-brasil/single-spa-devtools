@@ -1,0 +1,11 @@
+{
+  "name": "webpack-plugin",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": "Plugin de exemplo para Webpack integrado ao Nx.",
+  "author": "",
+  "license": "MIT",
+  "scripts": {},
+  "keywords": ["webpack", "plugin", "nx"]
+} 

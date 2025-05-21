@@ -1,0 +1,28 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Run VSCode Extension",
+			"type": "extensionHost",
+			"request": "launch",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}/packages/vscode-extension"
+			],
+			"outFiles": [
+				"${workspaceFolder}/packages/vscode-extension/dist/**/*.js"
+			],
+			"preLaunchTask": "${defaultBuildTask}"
+		},
+		{
+			"name": "Debug Webpack Plugin",
+			"type": "pwa-node",
+			"request": "launch",
+			"program": "${workspaceFolder}/packages/webpack-plugin/dist/index.js",
+			"cwd": "${workspaceFolder}/packages/webpack-plugin",
+			"preLaunchTask": "build:webpack-plugin",
+			"outFiles": [
+				"${workspaceFolder}/packages/webpack-plugin/dist/**/*.js"
+			]
+		}
+	]
+}

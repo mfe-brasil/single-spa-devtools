@@ -1,0 +1,63 @@
+{
+  "name": "vscode-extension",
+  "root": "packages/vscode-extension",
+  "projectType": "application",
+  "sourceRoot": "packages/vscode-extension/src",
+  "tags": ["vscode", "extension"],
+  "targets": {
+    "compile": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "webpack"
+      }
+    },
+    "watch": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "webpack --watch"
+      }
+    },
+    "package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "webpack --mode production --devtool hidden-source-map"
+      }
+    },
+    "compile-tests": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc -p . --outDir out"
+      }
+    },
+    "watch-tests": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc -p . -w --outDir out"
+      }
+    },
+    "pretest": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm run compile-tests && pnpm run compile && pnpm run lint"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "biome check src"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "vscode-extension-test"
+      }
+    },
+    "format": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "biome format src --write"
+      }
+    }
+  }
+} 
