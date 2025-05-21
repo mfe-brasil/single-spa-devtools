@@ -1,90 +1,44 @@
-# SingleSpaDevtool
+# single-spa-devtools
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+## Visão Geral
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+O **single-spa-devtools** é um ecossistema de ferramentas para potencializar o desenvolvimento de aplicações baseadas em [single-spa](https://single-spa.js.org/) e microfrontends. O projeto é composto por dois principais módulos integrados:
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+- **[single-spa-devtools-webpack-plugin](./packages/webpack-plugin/)**: Um plugin para Webpack que deve ser adicionado ao `root-config` de projetos single-spa. Ele monitora o importmap da aplicação e emite eventos via WebSocket para a extensão do VSCode, permitindo identificar MFEs (Micro Frontends) ativos, realizar overrides automáticos e outras integrações avançadas.
+- **[single-spa-devtools VSCode Extension](./packages/vscode-extension/)**: Uma extensão para o VSCode que se conecta ao plugin Webpack, oferecendo uma interface amigável para monitorar, debugar e gerenciar MFEs diretamente do editor. Permite aplicar overrides, acompanhar eventos, receber notificações em tempo real e muito mais.
 
-## Finish your CI setup
+## Principais Funcionalidades
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/7K6g17wPXp)
+- Monitoramento em tempo real dos MFEs ativos.
+- Override automático e manual de MFEs para facilitar testes e desenvolvimento isolado.
+- Gerenciamento e criação de regras de override pela interface do VSCode.
+- Monitoramento de eventos do ecossistema single-spa (carregamento, atualização, erros, etc).
+- Ferramentas de debug, logs centralizados e notificações em tempo real.
+- Painel dedicado no VSCode para interação com MFEs e overrides.
 
+## Como funciona a integração
 
-## Generate a library
+1. O plugin Webpack é instalado no root-config do seu projeto single-spa.
+2. Ele monitora o importmap e envia informações via WebSocket para a extensão do VSCode.
+3. A extensão exibe, em tempo real, o status dos MFEs, permite aplicar overrides e oferece ferramentas para facilitar o desenvolvimento e debug de microfrontends.
 
-```sh
-npx nx g @nx/js:lib packages/pkg1 --publishable --importPath=@my-org/pkg1
-```
+## Comece agora
 
-## Run tasks
+- Veja como instalar e usar o [plugin Webpack](./packages/webpack-plugin/README.md)
+- Veja como instalar e usar a [extensão VSCode](./packages/vscode-extension/README.md)
 
-To build the library use:
+## Roadmap
 
-```sh
-npx nx build pkg1
-```
+- Novas integrações entre plugin e extensão
+- Suporte a múltiplos ambientes
+- Ferramentas de análise de performance
+- Sugestão automática de overrides
+- Exportação/importação de configurações
 
-To run any task with Nx use:
+## Contribua
 
-```sh
-npx nx <target> <project-name>
-```
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests em qualquer um dos pacotes.
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+## Licença
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Versioning and releasing
-
-To version and release the library use
-
-```
-npx nx release
-```
-
-Pass `--dry-run` to see what would happen without actually releasing the library.
-
-[Learn more about Nx release &raquo;](hhttps://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Keep TypeScript project references up to date
-
-Nx automatically updates TypeScript [project references](https://www.typescriptlang.org/docs/handbook/project-references.html) in `tsconfig.json` files to ensure they remain accurate based on your project dependencies (`import` or `require` statements). This sync is automatically done when running tasks such as `build` or `typecheck`, which require updated references to function correctly.
-
-To manually trigger the process to sync the project graph dependencies information to the TypeScript project references, run the following command:
-
-```sh
-npx nx sync
-```
-
-You can enforce that the TypeScript project references are always in the correct state when running in CI by adding a step to your CI job configuration that runs the following command:
-
-```sh
-npx nx sync:check
-```
-
-[Learn more about nx sync](https://nx.dev/reference/nx-commands#sync)
-
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/nx-api/js?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+MIT
