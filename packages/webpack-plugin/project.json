@@ -8,7 +8,7 @@
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "tsc -p tsconfig.json --outDir dist"
+        "command": "cd packages/webpack-plugin && tsc"
       }
     },
     "lint": {
