@@ -11,6 +11,7 @@
     "build:webpack-plugin": "bunx nx run webpack-plugin:build",
     "lint:webpack-plugin": "bunx nx run webpack-plugin:lint",
     "test:webpack-plugin": "bunx nx run webpack-plugin:test",
+    "test": "bunx nx run-many --target=test",
     "lint": "bunx nx run-many --target=lint",
     "format": "bunx nx run-many --target=format"
   },

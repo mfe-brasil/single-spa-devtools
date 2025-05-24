@@ -15,7 +15,7 @@
 		},
 		{
 			"name": "Debug Webpack Plugin",
-			"type": "pwa-node",
+			"type": "node",
 			"request": "launch",
 			"program": "${workspaceFolder}/packages/webpack-plugin/dist/index.js",
 			"cwd": "${workspaceFolder}/packages/webpack-plugin",

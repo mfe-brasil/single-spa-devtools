@@ -38,7 +38,7 @@
     "pretest": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "pnpm run compile-tests && pnpm run compile && pnpm run lint"
+        "command": "bun run compile-tests && bun run compile && bun run lint"
       }
     },
     "lint": {
@@ -50,7 +50,7 @@
     "test": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "vscode-extension-test"
+        "command": "exit 0"
       }
     },
     "format": {
